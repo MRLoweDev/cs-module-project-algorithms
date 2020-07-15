@@ -4,9 +4,22 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    result = []
+    temp = 1
 
-    pass
+    for i in range(0, len(arr)):
+        for j in range(0, len(arr)):
+            if i == j:
+                continue
+            # print("arr[i]", arr[i])
+            # print("arr[j]", arr[j])
+            temp = temp * arr[j]
+        # print()
+        result.append(temp)
+        temp = 1
 
+
+    return result
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
