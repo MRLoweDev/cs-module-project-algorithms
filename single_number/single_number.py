@@ -4,8 +4,17 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    
+    counter = 0
+    for i in arr:
+        for j in arr:
+            if i == j:
+                counter += 1
 
-    pass
+        if counter is not 2:
+            return i
+        else:
+            counter = 0
 
 
 if __name__ == '__main__':
